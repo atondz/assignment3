@@ -5,8 +5,18 @@ const StudentModel = require('../models/StudentModel');  // Đổi từ Student 
 // Create a Student
 router.post('/', async (req, res) => {
   try {
-    const newStudent = new StudentModel(req.body);  
+    // Lấy giá trị từ body và ánh xạ 'name' sang 'fullName'
+    const { name, studentCode, isActive } = req.body;
+    
+    // Tạo sinh viên mới với 'fullName' thay vì 'name'
+    const newStudent = new StudentModel({
+      fullName: name,
+      studentCode,
+      isActive,
+    });
+    
     const savedStudent = await newStudent.save();
+    
     res.status(201).json({
       success: true,
       message: 'Student created successfully',

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const StudentModel = require('../models/StudentModel');  // Đổi từ Student thành StudentModel
+const StudentModel = require('../models/studentModel');  // Đổi từ Student thành StudentModel
 
 // Create a Student
 router.post('/', async (req, res) => {

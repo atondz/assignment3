@@ -3,7 +3,7 @@ require('dotenv').config(); // Đảm bảo dotenv được gọi đầu tiên
 
 const express = require('express');
 const connectDB = require('./db'); // Import file kết nối MongoDB
-const studentRoutes = require('./routes/StudentRoutes');
+const studentRoutes = require('./routes/studentRoutes');
 
 const app = express();
 const port = 4000;

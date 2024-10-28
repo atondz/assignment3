@@ -21,7 +21,7 @@ connectDB();
 app.get('/info', (req, res) => {
   res.json({
     data: {
-      fullName: "Pham Quoc Toan",
+      fullName: "Lam Ba Luan",
       studentCode: "QNUO1234",
     },
   });
